@@ -14,6 +14,7 @@
     <string name="action_clear">Clear</string>
     <string name="action_iso">Isomorphism</string>
     <string name="action_distance_table">Show table with distances</string>
+    <string name="memory_not_available">Memory not available</string>
     <string name="separator">Dividing line</string>
     <string name="file_titlesave">Save graph</string>
     <string name="file_hint">Graph</string>

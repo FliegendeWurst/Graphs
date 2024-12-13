@@ -249,8 +249,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle item selection
-		switch (item.getItemId()) {
-		case R.id.action_load:
+		if (item.getItemId() == R.id.action_load) {
 			if (!isExternalStorageWritable()) {
 				Toast toast = Toast.makeText(getBaseContext(),
 						getString(R.string.memory_not_available),
@@ -263,7 +262,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;
 
-		case R.id.action_save:
+		} else if (item.getItemId() == R.id.action_save) {
 			if (!isExternalStorageWritable()) {
 				Toast toast = Toast.makeText(getBaseContext(),
 						getString(R.string.memory_not_available),
@@ -314,7 +313,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;*/
 
-		case R.id.action_bipartit:
+		} else if (item.getItemId() == R.id.action_bipartit) {
 			if (isBipartite) {
 				isBipartite = false;
 				view.initializingNodesColor();
@@ -326,11 +325,11 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			}
 
 			return true;
-		case R.id.action_iso:
+		} else if (item.getItemId() == R.id.action_iso) {
 
 			getisofile();
 			return true;
-		case R.id.action_kruskal:
+		} else if (item.getItemId() == R.id.action_kruskal) {
 			if (isKruskal) {
 				isKruskal = false;
 				view.restore();
@@ -344,7 +343,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;
 
-		case R.id.action_distance_table:
+		} else if (item.getItemId() == R.id.action_distance_table) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setTitle("Tabla de distancias");
 			builder.setView(view.dijkstra(getApplicationContext()));
@@ -353,7 +352,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;
 
-		case R.id.action_tableinfo:
+		} else if (item.getItemId() == R.id.action_tableinfo) {
 			LayoutInflater factory_ = LayoutInflater.from(this);
 			final View dialogView_ = factory_.inflate(
 					R.layout.information_graph, null);
@@ -384,12 +383,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;
 
-		case R.id.action_clear:
+		} else if (item.getItemId() == R.id.action_clear) {
 			clear();
 
 			return true;
 
-		case R.id.action_settings:
+		} else if (item.getItemId() == R.id.action_settings) {
 			LayoutInflater f = LayoutInflater.from(this);
 			final View dv = f.inflate(R.layout.menu_settings, null);
 			AlertDialog.Builder bu = new AlertDialog.Builder(this);
@@ -495,19 +494,19 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 
 			return true;
 
-		case R.id.action_remove:
+		} else if (item.getItemId() == R.id.action_remove) {
 			toggle(TOGGLE_REMOVE, item);
 			stop(TOGGLE_ADD, (MenuItem) menu.findItem(R.id.action_add));
 
 			return true;
 
-		case R.id.action_add:
+		} else if (item.getItemId() == R.id.action_add) {
 			toggle(TOGGLE_ADD, item);
 			stop(TOGGLE_REMOVE, (MenuItem) menu.findItem(R.id.action_remove));
 
 			return true;
 
-		default:
+		} else {
 			return super.onOptionsItemSelected(item);
 		}
 	}

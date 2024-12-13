@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/ic_action_new"
-        android:showAsAction="ifRoom"
-        android:title="@string/action_add"/>
+        android:title="@string/action_add"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_remove"
         android:icon="@drawable/ic_action_discard"
-        android:showAsAction="ifRoom"
-        android:title="@string/action_remove"/>
+        android:title="@string/action_remove"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_edit"
         android:actionLayout="@layout/edit_weight_layout"
         android:icon="@drawable/ic_action_edit"
-        android:showAsAction="ifRoom"/>
+         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_load"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_load"/>
+        android:title="@string/action_load"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_save"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_save"/>
+        android:title="@string/action_save"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_export_image"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_export_image"/>
+        android:title="@string/action_export_image"
+        app:showAsAction="never" />
 
     <group android:checkableBehavior="all" >
         <item
             android:id="@+id/action_iso"
             android:checkable="true"
             android:orderInCategory="100"
-            android:showAsAction="never"
-            android:title="@string/action_iso"/>
+            android:title="@string/action_iso"
+            app:showAsAction="never" />
         <item
             android:id="@+id/action_bipartit"
             android:checkable="true"
             android:enabled="false"
             android:orderInCategory="100"
-            android:showAsAction="never"
-            android:title="@string/action_bipartite"/>
+            android:title="@string/action_bipartite"
+            app:showAsAction="never" />
         <item
             android:id="@+id/action_kruskal"
             android:checkable="true"
             android:enabled="false"
             android:orderInCategory="100"
-            android:showAsAction="never"
-            android:title="@string/action_kruskal"/>
+            android:title="@string/action_kruskal"
+            app:showAsAction="never" />
     </group>
 
     <item
         android:id="@+id/action_distance_table"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_distance_table"/>
+        android:title="@string/action_distance_table"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_tableinfo"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_tableinfo"/>
+        android:title="@string/action_tableinfo"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_clear"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_clear"/>
+        android:title="@string/action_clear"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
 
 </menu>
